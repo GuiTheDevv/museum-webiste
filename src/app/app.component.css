@@ -1,28 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+
+.container {
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.austinRoman {
+    font-family: 'Austin-Roman', sans-serif;
+}
+
+.austinMedium {
+    font-family: 'Austin-Medium', sans-serif;
+}
+
+.austinBold {
+    font-family: 'Austin-Bold', sans-serif;
+}
+
+.austinSemibold {
+    font-family: 'Austin-Semibold', sans-serif;
 }
 
 .container {
     display: flex;
-    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 80%;
 }
 
 .left-column {
-    flex: 40%;
-    background-color: #f1f1f1;
-    padding: 20px;
+    flex: 30%;
+    background-color: #ffffff;
+    padding: 35px;
+    overflow: hidden;
+    max-height: 115vh;
+    position: sticky;
+    top: 0;
+    height: auto;
+}
+
+.left-column::-webkit-scrollbar {
+    display: none;
 }
 
 .right-column {
-    flex: 60%;
-    background-color: #f9f9f9;
+    flex: 70%;
+    background-color: #ffffff;
     padding: 20px;
+    overflow-y: auto;
 }
 
-.block {
-    background-color: #e0e0e0;
-    padding: 10px;
-    margin-bottom: 10px;
+.sidebarLink{
+    padding: 0.25rem;
+    margin: 0;  
+    font-size: 16px;
+}
+
+.linkContainer{
+    padding-top: 32px;
+}
+
+.location{
+    padding-top: 16px;
+}
+
+.pullQuote{
+    color: #CCCBCB;
+    padding: 4px;
+    padding-top: 16px;
+    padding-left: 0;
+}
+
+.icons{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 32px;
+}
+
+.icon{
+    height: 32px;
+    filter: brightness(0) saturate(100%) invert(22%) sepia(95%) saturate(7000%) hue-rotate(87deg);
+    fill: #286634;
+    
+}
+
+.twitter{
+    /* create visual balance */
+    padding-left: 12px;
+}
+
+.description {
+    column-count: 2;
+    column-gap: 48px;
+    padding: 32px 40px;
+    line-height: 1.4;
+
+}
+
+.title{
+    text-align: center;
+}
+
+.headerImage {
+    width: 95%;
+    max-height: 400px;
+    /* Set the maximum height for the header image */
+    object-fit: contain;
+    /* Adjust the image positioning within its container */
+}
+
+.image-container {
+    padding-top: 32px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.divider{
+    margin: 64px 4rem;
+    border: none;
+    border-top: 4px solid #ccc;
+    border-radius: 5px;
+
+}
+
+.singleParagraph{
+    padding: 32px 40px;
+    line-height: 1.4;
+}
+
+.footer {
+    width: 100%;
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
 }

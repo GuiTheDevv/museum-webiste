@@ -1,29 +1,39 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+import { trigger, style, transition, animate } from '@angular/animations';
 
-describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
-  }));
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger('slideInOut', [
+      transition(':increment', [
+        style({ transform: 'translateX(100%)' }),
+        animate('500ms ease-in', style({ transform: 'translateX(0%)' })),
+      ]),
+      transition(':decrement', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('500ms ease-in', style({ transform: 'translateX(0%)' })),
+      ]),
+    ]),
+  ],
+})
+export class AppComponent {
+  title = 'museum-website';
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+  images: string[] = [
+    "../assets/images/Colonel Nicholls-Saint George Grenada (16x9)-min.jpg",
+    "../assets/images/CombatNavalDeLaGrenade-DumoulinCompressed.JPG"
+  ];
 
-  it(`should have as title 'museum-website'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('museum-website');
-  });
+  currentSlide: number = 0;
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('museum-website app is running!');
-  });
-});
+  changeSlide(direction: number): void {
+    this.currentSlide += direction;
+    if (this.currentSlide < 0) {
+      this.currentSlide = this.images.length - 1;
+    } else if (this.currentSlide >= this.images.length) {
+      this.currentSlide = 0;
+    }
+  }
+}

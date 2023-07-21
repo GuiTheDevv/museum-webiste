@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'museum-website';
+  title = 'My Angular App';
+
+  // You can add additional properties and methods for your application here
 }
