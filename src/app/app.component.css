@@ -70,6 +70,11 @@ html {
     overflow-y: auto;
 }
 
+a{
+    text-decoration: none;
+    color: #286634;
+}
+
 .sidebarLink {
     margin: 0;
     font-size: 18px;
@@ -92,7 +97,7 @@ html {
 }
 
 .pullQuote{
-    color: #CCCBCB;
+    color: #949494;
     padding: 4px;
     padding-top: 16px;
     padding-left: 0;
@@ -109,10 +114,10 @@ html {
     height: 32px;
     filter: brightness(0) saturate(100%) invert(22%) sepia(95%) saturate(7000%) hue-rotate(87deg);
     fill: #286634;
+    transition: transform 0.3s;
 }
 
 .twitter{
-    /* create visual balance */
     padding-left: 12px;
 }
 
@@ -131,9 +136,7 @@ html {
 .headerImage {
     width: 95%;
     max-height: 400px;
-    /* Set the maximum height for the header image */
     object-fit: contain;
-    /* Adjust the image positioning within its container */
 }
 
 .image-container {
@@ -159,10 +162,108 @@ html {
 }
 
 .footer {
+    display: flex;
+    background-color: #286634;
     width: 100%;
-    background-color: green;
     color: white;
     text-align: center;
-    padding: 50px;
     box-sizing: border-box;
+}
+
+.footer-icons{
+    width: 50%;
+    display: flex;
+    padding-top: 13px;
+}
+
+.icon:hover, .footer-icon:hover {
+    transform: scale(1.2); 
+}
+
+.footer-icon {
+    height: 32px;
+    filter: brightness(0) saturate(100%) invert(100%);
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.footer-left {
+    width: 30%; 
+    padding: 35px;
+    text-align: center;
+}
+
+.footer-location{
+    text-align: left; 
+    align-items: left; 
+    justify-content: left;
+}
+
+.footer-right {
+    flex: 20%;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.signup-label {
+    display: block;
+    color: #fff;
+    margin-bottom: 13px;
+    text-align: left; 
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: 100%; /* Set the height to 100% */
+    flex-grow: 1; /* Allow the form to fill the available vertical space */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+input[type="email"] {
+    padding: 8px;
+    background-color: #286634; 
+    border: 1px solid #fff; 
+    border-radius: 0; 
+    width: 95%;
+    height: 17%;
+    margin-bottom: 13px;
+    color: #fff; 
+    text-align: left; 
+    font-size: large;
+}
+
+input[type="email"]::placeholder {
+    color: #ffffffce;
+    text-align: left; 
+    font-size: large;
+}
+
+.signup-button {
+    padding: 3px 6px; 
+    background-color: #fff;
+    color: #286634;
+    border: 1px solid #fff;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    width: 23%; 
+    height: 29%;
+    font-size: 20px;
+}
+
+.signup-button:hover {
+    background-color: #286634;
+    color: #fff;
+    border-color: #fff;
+}
+
+.footer-space{
+    flex: 20%; 
+    padding: 32px 40px;
 }
