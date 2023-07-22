@@ -70,14 +70,21 @@ html {
     overflow-y: auto;
 }
 
-.sidebarLink{
-    padding: 0.25rem;
-    margin: 0;  
-    font-size: 16px;
+.sidebarLink {
+    margin: 0;
+    font-size: 18px;
+    transition: transform 0.3s, color 0.3s,letter-spacing 0.3s;
+}
+
+.sidebarLink:hover {
+    color: #286634;
+    cursor: pointer;
+    letter-spacing: 2px;
 }
 
 .linkContainer{
     padding-top: 32px;
+    line-height: 175%;
 }
 
 .location{
@@ -102,7 +109,6 @@ html {
     height: 32px;
     filter: brightness(0) saturate(100%) invert(22%) sepia(95%) saturate(7000%) hue-rotate(87deg);
     fill: #286634;
-    
 }
 
 .twitter{
