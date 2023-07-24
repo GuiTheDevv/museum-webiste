@@ -267,3 +267,11 @@ input[type="email"]::placeholder {
     flex: 20%; 
     padding: 32px 40px;
 }
+
+a[smoothScroll] {
+    transition: 0.5s ease-in-out;
+}
+
+a[smoothScroll]:hover {
+    transform: translateY(-5px);
+}
