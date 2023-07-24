@@ -28,18 +28,22 @@ html {
 
 .austinRoman {
     font-family: 'Austin-Roman', sans-serif;
+    font-size: 1.3vw;
 }
 
 .austinMedium {
     font-family: 'Austin-Medium', sans-serif;
+    font-size: 1.3vw;
 }
 
 .austinBold {
     font-family: 'Austin-Bold', sans-serif;
+    font-size: 1.3vw;
 }
 
 .austinSemibold {
     font-family: 'Austin-Semibold', sans-serif;
+    font-size: 1.3vw;
 }
 
 
@@ -51,8 +55,8 @@ html {
 .left-column {
     flex: 30%;
     background-color: #ffffff;
-    padding: 35px;
-    padding-left: 80px;
+    padding: 5%;
+    /* padding-left: 80px; */
     padding-top: 60px;
     overflow: hidden;
     max-height: 115vh;
@@ -68,10 +72,11 @@ html {
 .right-column {
     flex: 70%;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 4vh;
     overflow-y: auto;
-    padding-top: 60px;
+    padding-top: 6vh;
     padding-right: 0;
+    margin-right: 4vh;
 }
 
 a{
@@ -81,12 +86,13 @@ a{
 
 .sidebarLink {
     margin: 0;
-    font-size: 18px;
+    font-size: 1.8vw;
     transition: transform 0.3s, color 0.3s,letter-spacing 0.3s;
+    line-height: 1.4;
 }
 
 .sidebarLink:hover {
-    color: #286634;
+    color: #2BB093;
     cursor: pointer;
     letter-spacing: 2px;
 }
@@ -102,22 +108,22 @@ a{
 
 .pullQuote{
     color: #949494;
-    padding: 4px;
-    padding-top: 16px;
+    padding-top: 2rem;
 }
 
 .icons{
     width: 50%;
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 32px;
+    padding-top: 4vh;
+
 }
 
 .icon{
-    height: 32px;
+    height: 2vw;
     filter: brightness(0) saturate(100%) invert(22%) sepia(95%) saturate(7000%) hue-rotate(87deg);
     fill: #286634;
     transition: transform 0.3s;
+    margin-right: 3vh;
 }
 
 .twitter{
@@ -127,18 +133,21 @@ a{
 .description {
     column-count: 2;
     column-gap: 48px;
-    padding: 32px 40px;
+    padding: 8vh 0px;
     line-height: 1.4;
     box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
 }
 
 .title{
     text-align: center;
+    font-size: 2.6vw;
 }
 
 .headerImage {
-    max-width: 200vw;
-    max-height: 400px;
+    max-width: 100%;
+    min-width: 100%;
     object-fit: contain;
 }
 
@@ -148,11 +157,12 @@ a{
     justify-content: center;
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden;   
+    margin: auto;
 }
 
 .divider{
-    margin: 64px 4rem;
+    margin: 6vh 4vw;
     border: none;
     border-top: 4px solid #ccc;
     border-radius: 5px;
@@ -160,7 +170,7 @@ a{
 }
 
 .singleParagraph{
-    padding: 32px 40px;
+    padding: 4vh 0px;
     line-height: 1.4;
 }
 
@@ -184,7 +194,7 @@ a{
 }
 
 .footer-icon {
-    height: 32px;
+    height: 2vw;
     filter: brightness(0) saturate(100%) invert(100%);
     margin-right: 20px;
     transition: transform 0.3s;
@@ -192,7 +202,7 @@ a{
 
 .footer-left {
     width: 30%; 
-    padding: 35px;
+    padding: 8vh;
     text-align: center;
 }
 
@@ -204,7 +214,7 @@ a{
 
 .footer-right {
     flex: 20%;
-    padding: 32px 40px;
+    padding: 8vh 0px;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -245,7 +255,7 @@ input[type="email"] {
 input[type="email"]::placeholder {
     color: #ffffffce;
     text-align: left; 
-    font-size: large;
+    font-size: 1.3vw;
 }
 
 .signup-button {
@@ -294,9 +304,10 @@ input[type="email"]::placeholder {
 
  a[smoothScroll] {
      transition: 0.5s ease-in-out;
+    scroll-behavior: smooth;
  }
 
  a[smoothScroll]:hover {
-     transform: translateY(-5px);
+     transform: translateY(-5px);   
  }
   
