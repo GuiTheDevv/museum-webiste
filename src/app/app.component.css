@@ -137,7 +137,7 @@ a{
 }
 
 .headerImage {
-    max-width: 200vw;
+    width: 95%;
     max-height: 400px;
     object-fit: contain;
 }
