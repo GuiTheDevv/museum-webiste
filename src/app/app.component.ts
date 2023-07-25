@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { Firestore, setDoc, doc } from '@angular/fire/firestore';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { fromEvent } from 'rxjs';
+import { map, takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +14,19 @@ export class AppComponent {
 
   constructor(
     private firestore: Firestore,
-    private snackBar: MatSnackBar 
+    private snackBar: MatSnackBar,
+    private elementRef: ElementRef 
   ) {}
+
+  scrollToSection(sectionId: string): void {
+    const section = this.elementRef.nativeElement.querySelector('#' + sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  }
 
   addEmails(email: string) {
     const ref = doc(this.firestore, 'emails', email);
