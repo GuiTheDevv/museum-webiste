@@ -17,6 +17,24 @@ html {
     width: 100vw;
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column{
+        position: relative;
+    }
+
+    .right-column{
+        position:relative;
+    }
+
+    .linkContainer{
+        text-align: center;
+    }
+}
+
 .container {
     display: flex;
     min-height: 100%;
@@ -88,7 +106,7 @@ a{
     margin: 0;
     font-size: 1.8vw;
     transition: transform 0.3s, color 0.3s,letter-spacing 0.3s;
-    line-height: 1.4;
+    line-height: 1.2;
 }
 
 .sidebarLink:hover {
@@ -98,24 +116,21 @@ a{
 }
 
 .linkContainer{
-    padding-top: 32px;
-    line-height: 175%;
+    padding-top: 1rem;
 }
 
 .location{
-    padding-top: 16px;
+    padding-top: 1rem;
 }
 
 .pullQuote{
     color: #949494;
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 .icons{
     width: 50%;
     display: flex;
-    padding-top: 4vh;
-
 }
 
 .icon{
