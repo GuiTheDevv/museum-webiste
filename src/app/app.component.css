@@ -17,24 +17,6 @@ html {
     width: 100vw;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .left-column{
-        position: relative;
-    }
-
-    .right-column{
-        position:relative;
-    }
-
-    .linkContainer{
-        text-align: center;
-    }
-}
-
 .container {
     display: flex;
     min-height: 100%;
@@ -260,7 +242,6 @@ input[type="email"] {
     background-color: #286634; 
     border: 1px solid #fff; 
     border-radius: 0; 
-    width: 90%;
     height: 25%;
     margin-bottom: 13px;
     color: #fff; 
@@ -326,3 +307,103 @@ input[type="email"]::placeholder {
  a[smoothScroll]:hover {
      transform: translateY(-5px);   
  }
+
+/* Existing CSS styles */
+
+/* Add the following media query */
+@media screen and (max-width: 768px) {
+
+    html{
+        width: 110vw;
+    }
+
+    .container {
+        flex-direction: column;
+        /* Stack the columns on top of each other */
+    }
+
+    .left-column {
+        flex: 100%;
+        position: relative;
+        top: initial;
+        max-height: none;
+        padding: 15%;
+        text-align: center;
+    }
+
+    .right-column {
+        flex: 100%;
+        margin-right: 0;
+        padding: 10%;
+        margin-left: auto;
+    }
+
+    .logo{
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+
+    .austinBold,
+    .austinMedium,
+    .austinSemibold,
+    .austinRoman{
+        font-size: 16px;
+    }
+
+    .title{
+        font-size: 24px;
+    }
+
+    .icons{
+        display: block;
+        width: 100%;
+    }
+
+    .icon , .footer-icon{
+        height: 32px;
+    }
+
+    .footer-icons{
+        padding-top: 0;
+    }
+
+    .image-container{
+        overflow: scroll;
+        width: 100%;
+    }
+    
+    .description {
+        column-count: 2;
+        column-gap: 24px;
+        padding: 4vh 0px;
+        box-sizing: border-box;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .footer-left{
+        padding: 0;
+        padding: 1rem;
+        flex: 50%;
+
+    }
+
+    .footer-right{
+        padding: 0;
+        padding: 1rem;
+        flex: 50%;
+    }
+
+    .footer-space{
+        flex: 0%;
+        padding: 0;
+    }
+
+    .signup-button{
+        width: 100%;
+    }
+
+    .signup-form input::placeholder {
+        font-size: 16px;
+    }
+}
