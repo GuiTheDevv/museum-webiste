@@ -98,16 +98,18 @@ a{
 }
 
 .linkContainer{
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 
 .location{
     padding-top: 1rem;
+    line-height: 1.1;
 }
 
 .pullQuote{
     color: #949494;
     padding-top: 1rem;
+    line-height: 1.1;
 }
 
 .icons{
@@ -160,11 +162,10 @@ a{
 }
 
 .divider{
-    margin: 6vh 4vw;
+    margin: 6vh 0vw;
     border: none;
-    border-top: 4px solid #ccc;
+    border-top: 2px solid #ccc;
     border-radius: 5px;
-
 }
 
 .singleParagraph{
@@ -228,6 +229,7 @@ a{
 }
 
 .signup-form {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -241,12 +243,13 @@ input[type="email"] {
     padding: 8px;
     background-color: #286634; 
     border: 1px solid #fff; 
-    border-radius: 0; 
+    border-radius: 0px; 
     height: 25%;
     margin-bottom: 13px;
     color: #fff; 
     text-align: left; 
     font-size: large;
+    width: 75%;
 }
 
 input[type="email"]::placeholder {
@@ -263,7 +266,7 @@ input[type="email"]::placeholder {
     border-radius: 0;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    width: 22%; 
+    width: 50%; 
     height: 20%;
     font-size: 20px;
 }
@@ -399,11 +402,19 @@ input[type="email"]::placeholder {
         padding: 0;
     }
 
-    .signup-button{
-        width: 100%;
-    }
-
     .signup-form input::placeholder {
         font-size: 16px;
+    }
+
+    input[type="email"] {
+        padding: 8px;
+        background-color: #286634;
+        border: 1px solid #fff;
+        border-radius: 0px;
+        height: 25%;
+        margin-bottom: 13px;
+        color: #fff;
+        text-align: left;
+        font-size: large;
     }
 }
