@@ -42,12 +42,21 @@
             <header>
                 <h2 class="title AustinBold">OUR MISSION</h2>
             </header>
+            
             <div class="image-container">
-                
-                <img class="headerImage" src="../assets/images/Colonel Nicholls-Saint George Grenada (16x9)-min.jpg"
-                    alt="Image description">
-                
-            </div>
+                <div class="slide-button-container">
+                  <button (click)="goToPreviousOurMission()" class="slide-button">
+                    <img class="left-arrow" src="../assets/icons/prev.svg" alt="previous image">
+                  </button>
+                </div>
+                <img class="headerImage" [src]="getOurMissionSlide()" alt="slide image">
+                <div class="slide-button-container">
+                  <button (click)="goToNextOurMission()" class="slide-button">
+                    <img class="right-arrow" src="../assets/icons/next.svg" alt="next image">
+                  </button>
+                </div>
+              </div>                
+            
         </div>
 
         <div class="description">
@@ -87,12 +96,20 @@
                 the foremost institution for the preservation and interpretation
             </p>
         </div>
+
         <div class="image-container">
-            
-            <img class="headerImage" src="../assets/images/MuseumSideView.jpg"
-                alt="Image Couldn't Load">
-            
-        </div>
+            <div class="slide-button-container">
+              <button (click)="goToPreviousOurNewDirection()" class="slide-button">
+                <img class="left-arrow" src="../assets/icons/prev.svg" alt="previous image">
+              </button>
+            </div>
+            <img class="headerImage" [src]="getOurNewDirectionSlide()" alt="slide image">
+            <div class="slide-button-container">
+              <button (click)="goToNextOurNewDirection()" class="slide-button">
+                <img class="right-arrow" src="../assets/icons/next.svg" alt="next image">
+              </button>
+            </div>
+          </div> 
 
         <p class="singleParagraph austinRoman"> of the islands'
             cultural heritage. In a concerted effort to enhance the GNM, the Board of
@@ -109,12 +126,21 @@
             <header>
                 <h2 class="title AustinBold">ABOUT US</h2>
             </header>
+
             <div class="image-container">
-                
-                <img class="headerImage" src="../assets/images/aNorthEastViewOfTheVillaHouse.jpg"
-                    alt="Image description">
-                
-            </div>
+                <div class="slide-button-container">
+                  <button (click)="goToPreviousAboutUs()" class="slide-button">
+                    <img class="left-arrow" src="../assets/icons/prev.svg" alt="previous image">
+                  </button>
+                </div>
+                <img class="headerImage" [src]="getAboutUsSlide()" alt="slide image">
+                <div class="slide-button-container">
+                  <button (click)="goToNextAboutUs()" class="slide-button">
+                    <img class="right-arrow" src="../assets/icons/next.svg" alt="next image">
+                  </button>
+                </div>
+              </div> 
+
         </div>
         <div class="description">
             <p class="austinRoman"> The Grenada National Museum 
@@ -145,11 +171,21 @@
             <header>
                 <h2 class="title AustinBold">HISTORY</h2>
             </header>
+
             <div class="image-container">
-                
-                <img class="headerImage" src="../assets/images/BelmontEstate1824.jpg" alt="Image description">
-                
-            </div>
+                <div class="slide-button-container">
+                  <button (click)="goToPreviousHistory()" class="slide-button">
+                    <img class="left-arrow" src="../assets/icons/prev.svg" alt="previous image">
+                  </button>
+                </div>
+                <img class="headerImage" [src]="getHistorySlide()" alt="slide image">
+                <div class="slide-button-container">
+                  <button (click)="goToNextHistory()" class="slide-button">
+                    <img class="right-arrow" src="../assets/icons/next.svg" alt="next image">
+                  </button>
+                </div>
+              </div> 
+
         </div>
         <div class="description">
             <p class="austinRoman">The Grenada National Museum at the
