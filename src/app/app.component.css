@@ -159,6 +159,7 @@ a{
 
 .left-arrow, .right-arrow{
     cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(100%);
 }
 
 .image-container {
@@ -169,6 +170,31 @@ a{
     width: 100%;
     overflow: hidden;   
     margin: auto;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+
+.left-arrow:active, .right-arrow:active {
+    transform: scale(1.2);
+    transition: 0.2s ease-in-out;
 }
 
 .divider{
@@ -313,7 +339,7 @@ input[type="email"]::placeholder {
  }
 
  a[smoothScroll] {
-     transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     scroll-behavior: smooth;
  }
 
