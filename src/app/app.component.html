@@ -2,11 +2,10 @@
     <div class="left-column">
         <img class="logo" src="../assets/images/GNM_Website_Logo.svg" alt="">
         <div class="linkContainer">
-            <p><a href="#our-mission" smoothScroll><span class="sidebarLink austinSemibold">OUR MISSION</span></a></p>
-            <p><a href="#our-new-direction" smoothScroll><span class="sidebarLink austinSemibold">OUR NEW DIRECTION</span></a></p>
-            <p><a href="#about-us" smoothScroll><span class="sidebarLink austinSemibold">ABOUT US</span></a></p>
-            <p><a href="#history" smoothScroll><span class="sidebarLink austinSemibold">HISTORY</span></a></p>
-            <p><a href="#our-director" smoothScroll><span class="sidebarLink austinSemibold">OUR DIRECTOR</span></a></p>
+            <p><a (click)="scrollToSection('our-mission')" tabindex="1"><span class="sidebarLink austinSemibold">OUR MISSION</span></a></p>
+            <p><a (click)="scrollToSection('our-new-direction')" tabindex="2"><span class="sidebarLink austinSemibold">OUR NEW DIRECTION</span></a></p>
+            <p><a (click)="scrollToSection('about-us')" tabindex="3"><span class="sidebarLink austinSemibold">ABOUT US</span></a></p>
+            <p><a (click)="scrollToSection('history')" tabindex="4"><span class="sidebarLink austinSemibold">HISTORY</span></a></p>
         </div>
 
 
@@ -38,16 +37,17 @@
     </div>
 
     <div class="right-column">
-        <div class="section">
-            <header id="our-mission">
+        <div id="our-mission"  class="section">
+            <header>
                 <h2 class="title AustinBold">OUR MISSION</h2>
             </header>
+            
             <div class="image-container">
-                <img class="prevButton" src="../assets/icons/prev.svg" alt="">
-                <img class="headerImage" src="../assets/images/Colonel Nicholls-Saint George Grenada (16x9)-min.jpg"
-                    alt="Image description">
-                <img class="nextButton" src="../assets/icons/next.svg" alt="">
-            </div>
+                    <img class="left-arrow" (click)="goToPreviousOurMission()" src="../assets/icons/prev.svg" alt="previous image">
+                <img class="headerImage" [src]="getOurMissionSlide()" alt="slide image">
+                    <img class="right-arrow" (click)="goToNextOurMission()" src="../assets/icons/next.svg" alt="next image">
+              </div>                
+            
         </div>
 
         <div class="description">
@@ -70,10 +70,11 @@
 
         <hr class="divider">
 
-        <header id="our-new-direction">
-            <h2 class="title AustinBold">OUR NEW DIRECTION</h2>
-        </header>
-        
+        <div id="our-new-direction" class="section">
+            <header>
+                <h2 class="title AustinBold">OUR NEW DIRECTION</h2>
+            </header>
+        </div>
 
         <div class="description">
             <p class="austinRoman"> The GNM, though in existence for the past 47 years, 
@@ -86,12 +87,14 @@
                 the foremost institution for the preservation and interpretation
             </p>
         </div>
+
         <div class="image-container">
-            <img class="prevButton" src="../assets/icons/prev.svg" alt="">
-            <img class="headerImage" src="../assets/images/MuseumSideView.jpg"
-                alt="Image Couldn't Load">
-            <img class="nextButton" src="../assets/icons/next.svg" alt="">
-        </div>
+
+                <img class="left-arrow" (click)="goToPreviousOurNewDirection()"  src="../assets/icons/prev.svg" alt="previous image">
+            <img class="headerImage" [src]="getOurNewDirectionSlide()" alt="slide image">
+                <img class="right-arrow" (click)="goToNextOurNewDirection()" src="../assets/icons/next.svg" alt="next image">
+          </div> 
+
         <p class="singleParagraph austinRoman"> of the islands'
             cultural heritage. In a concerted effort to enhance the GNM, the Board of
             Directors and staff have embarked on a journey that will see the GNM on the
@@ -103,16 +106,17 @@
 
         <hr class="divider">
 
-        <div class="section">
-            <header id="about-us">
+        <div id="about-us" class="section">
+            <header>
                 <h2 class="title AustinBold">ABOUT US</h2>
             </header>
+
             <div class="image-container">
-                <img class="prevButton" src="../assets/icons/prev.svg" alt="">
-                <img class="headerImage" src="../assets/images/aNorthEastViewOfTheVillaHouse.jpg"
-                    alt="Image description">
-                <img class="nextButton" src="../assets/icons/next.svg" alt="">
-            </div>
+                    <img class="left-arrow" (click)="goToPreviousAboutUs()" src="../assets/icons/prev.svg" alt="previous image">
+                <img class="headerImage" [src]="getAboutUsSlide()" alt="slide image">
+                    <img class="right-arrow" (click)="goToNextAboutUs()" src="../assets/icons/next.svg" alt="next image">
+              </div> 
+
         </div>
         <div class="description">
             <p class="austinRoman"> The Grenada National Museum 
@@ -132,29 +136,31 @@
         </div>
 
         <div class="image-container">
-            <img class="prevButton" src="../assets/icons/prev.svg" alt="">
+            
             <img class="headerImage" src="../assets/images/ChurchWithTombstones.jpg" alt="Image description">
-            <img class="nextButton" src="../assets/icons/next.svg" alt="">
+            
         </div>
 
         <hr class="divider">
 
-        <div class="section">
-            <header id="history">
+        <div id="history" class="section">
+            <header>
                 <h2 class="title AustinBold">HISTORY</h2>
             </header>
+
             <div class="image-container">
-                <img class="prevButton" src="../assets/icons/prev.svg" alt="">
-                <img class="headerImage" src="../assets/images/BelmontEstate1824.jpg" alt="Image description">
-                <img class="nextButton" src="../assets/icons/next.svg" alt="">
-            </div>
+                <img class="left-arrow" (click)="goToPreviousHistory()" src="../assets/icons/prev.svg" alt="previous image">
+                <img class="headerImage" [src]="getHistorySlide()" alt="slide image">
+                <img class="right-arrow" (click)="goToNextHistory()" src="../assets/icons/next.svg" alt="next image">
+            </div> 
+
         </div>
         <div class="description">
             <p class="austinRoman">The Grenada National Museum at the
                 corner of Young and Monckton Streets, St. George's opened 
                 its doors to the public on 17 April 1976. Under the instigation
                 of then Prime Minister Sir Eric M. Gairy, it was founded by a 
-                group of expatriates and citizens who came t ogether to promote
+                group of expatriates and citizens who came together to promote
                 the awareness of history, culture and heritage by displaying 
                 elements of Grenadian history and culture. For many years 
                 thereafter it was the sole functioning museum in the country,
@@ -162,9 +168,9 @@
         </div>
         
         <div class="image-container">
-            <img class="prevButton" src="../assets/icons/prev.svg" alt="">
+            
             <img class="headerImage" src="../assets/images/History1HomeHotel1902.jpg" alt="Image description">
-            <img class="nextButton" src="../assets/icons/next.svg" alt="">
+            
         </div>
 
                 <p class="singleParagraph austinRoman"> 
@@ -182,14 +188,14 @@
 
                 <hr class="divider">
 
-                <div class="section">
-                    <header id="our-director">
+                <!-- <div id="our-director" class="section">
+                    <header>
                         <h2 class="title AustinBold">OUR DIRECTOR</h2>
                     </header>
                     <div class="image-container">
-                        <img class="prevButton" src="../assets/icons/prev.svg" alt="">
+                        
                         <img class="headerImage" src="../assets/images/angus-min.jpg" alt="Image description">
-                        <img class="nextButton" src="../assets/icons/next.svg" alt="">
+                        
                     </div>
                 </div>
                 <div class="description">
@@ -210,7 +216,7 @@
                         of several books and articles, including: A to Z of Grenada Heritage
                         (2022) and Island Caribs and French Settlers in Grenada, 
                         1498 - 1763 (2013)</p>
-                </div>
+                </div> -->
                 
     </div>
 
@@ -246,8 +252,8 @@
     <div class="footer-right">       
         <div class="signup-form">
             <label for="email" class="signup-label austinRoman">Sign up for our newsletter</label>
-            <input type="email" id="email" class="austinRoman" placeholder="Email Address">
-            <button class="signup-button austinRoman">Sign Up</button>
+            <input type="email" id="email" #emailInput class="austinRoman" placeholder="Email Address">
+            <button class="signup-button austinRoman" (click)="addEmails(emailInput.value)">Sign Up</button>
         </div>
     </div>
 </footer>
